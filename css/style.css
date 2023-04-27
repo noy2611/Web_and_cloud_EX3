@@ -283,13 +283,14 @@ h3 {
 }
 
 .layout2 aside {
-    position: relative;
+    position: absolute;
     display: flex;
     width: 169px;
-    height: 2185px; 
+    height: 2185px;
     justify-self: end;
     background: #EBEF18;
-    left: 90%;
+    align-self: flex-end;
+    right: 0;
 }
 
 .Square_black1 {
@@ -345,8 +346,8 @@ h3 {
     position: relative;
 }
 
-main{
- display: flex;
+main {
+    display: flex;
 }
 
 #Square_black {
@@ -366,17 +367,18 @@ main{
 
 .rect_gray {
     display: flex;
-   min-height: 995px;
+    min-height: 995px;
     min-width: 372px;
     background: #E5E5E5;
 }
 
 .blue {
-    position: relative; 
-    display: flex; 
+    position: relative;
+    display: flex;
     min-height: 995px;
     min-width: 104px;
     background: #1847EF4D;
+    right: 0px;
 }
 
 #main_nav {
@@ -394,29 +396,27 @@ main{
     margin-top: 123px;
 }
 
-
-.container{
+.container {
     display: flex;
-    min-width: 100vw;
+    width: 100vw;
 }
+
 #wrapper_game {
-    height:max-content;
+    height: max-content;
     flex-grow: 1;
     position: relative;
     margin: 64px;
     display: flex;
     flex-wrap: wrap;
- 
 }
+
 .rect_yellow {
-      position: relative;
+    position: relative;
     display: flex;
     height: 463px;
     width: 100%;
     background: #EBEF18;
 }
-
-
 
 .layout3 footer {
     position: relative;
@@ -432,9 +432,11 @@ main{
     aside.blue {
         display: none;
     }
-.container{
-    flex-flow:column ;
-}
+
+    .container {
+        flex-flow: column;
+    }
+
     .layout3 header>section {
         margin-left: calc(100% - 100px);
     }
@@ -452,7 +454,6 @@ main{
     .rect_gray {
         width: 100%;
         position: relative;
-        /* top: 123px; */
         min-height: 105px;
         max-height: 105px;
     }
@@ -466,7 +467,6 @@ main{
         position: relative;
         height: 474px;
         width: 100%;
-      
     }
 
     .layout3 footer {
