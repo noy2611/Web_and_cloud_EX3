@@ -7,28 +7,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap"
-      rel="stylesheet"/>
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <title>Noy Raichman</title>
   </head>
   <body class="layout3">
     <div id="wrapper_layout3">
       <header>
-        <section class="Square_black"></section>
+        <div id="Square_black"></div>
       </header>
       <main>
-        <section class="rect_gray"></section>
-        <section class="ball" id="ball_layout3"></section>
-        <nav id="main_nav">
-          <ul class="ul3">
-            <li><a href="index.html">MIX</a></li>
-            <li><a href="layout2.html"> STAIRS</a></li>
-            <li><a href="#">DYNAMIC</a></li>
-          </ul>
-        </nav>
-        <aside class="blue"></aside>
-        <section class="rect_yellow"></section>
+        <section class="container">
+          <section class="rect_gray">
+            <nav id="main_nav">
+              <ul class="ul3">
+                <li><a href="index.html">MIX</a></li>
+                <li><a href="layout2.html"> STAIRS</a></li>
+                <li><a href="#">DYNAMIC</a></li>
+              </ul>
+          </section>
+          <section class="ball" id="ball_layout3"></section>
+          </nav>
+          <section id="wrapper_game"></section>
+          <aside class="blue"></aside>
+        </section>
       </main>
+      <section class="rect_yellow"></section>
       <footer></footer>
     </div>
+    <script src="js/scripts.js" async></script>
   </body>
 </html>

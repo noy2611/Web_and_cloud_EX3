@@ -15,10 +15,9 @@ section {
 /* index1 */
 
 header {
-    width: 1440px;
+    width: 100%;
     height: 123px;
     left: 0px;
-    top: 0px;
     background: #F2E9E9;
     text-align: center;
 }
@@ -45,7 +44,7 @@ ul.ul1 {
 }
 
 a:hover {
-    color:#f62ffd;
+    color: #f62ffd;
 }
 
 .ball {
@@ -58,7 +57,8 @@ a:hover {
 
 #ball_index {
     top: 34px;
-    left: 595px;
+    left: 640px;
+    display: block;
     background: #F72828;
 }
 
@@ -196,7 +196,6 @@ a:hover {
     background: #EBEF18;
 }
 
-
 #rectangle15 {
     position: absolute;
     top: 412px;
@@ -229,8 +228,8 @@ h3 {
 
 #index1 footer {
     position: relative;
-    width: 1440px;
     height: 41px;
+    width: 100%;
     background: #000000;
     margin-top: 983px;
 }
@@ -239,7 +238,7 @@ h3 {
 
 #ball_layout2 {
     top: 34px;
-    left: 686px;
+    left: 730px;
     background: #F72828;
 }
 
@@ -277,7 +276,7 @@ h3 {
 
 .layout2 footer {
     position: fixed;
-    width: 1440px;
+    width: 100%;
     height: 41px;
     background: #000000;
     bottom: 0;
@@ -285,10 +284,12 @@ h3 {
 
 .layout2 aside {
     position: relative;
+    display: flex;
     width: 169px;
-    height: 2185px;
-    left: 1271px;
+    height: 2185px; 
+    justify-self: end;
     background: #EBEF18;
+    left: 90%;
 }
 
 .Square_black1 {
@@ -334,7 +335,6 @@ h3 {
     letter-spacing: 0em;
     text-align: center;
     color: #000000;
-    
 }
 
 .my_name a:hover {
@@ -342,15 +342,19 @@ h3 {
 }
 
 .layout3 header {
-    position: absolute;
+    position: relative;
 }
 
-.Square_black {
-    position: relative;
+main{
+ display: flex;
+}
+
+#Square_black {
+    top: 21px;
+    right: 24px;
+    position: absolute;
     height: 80px;
     width: 80px;
-    margin-left: 1336px;
-    margin-top: 21px;
     background-color: #000000;
 }
 
@@ -361,23 +365,22 @@ h3 {
 }
 
 .rect_gray {
-    height: 995px;
-    width: 372px;
+    display: flex;
+   min-height: 995px;
+    min-width: 372px;
     background: #E5E5E5;
 }
 
 .blue {
-    position: absolute;
-    height: 995px;
-    width: 104px;
-    left: 1336px;
-    top: 123px;
+    position: relative; 
+    display: flex; 
+    min-height: 995px;
+    min-width: 104px;
     background: #1847EF4D;
 }
 
 #main_nav {
-    position: absolute;
-    top: 120px;
+    position: relative;
 }
 
 .ul3 {
@@ -391,17 +394,35 @@ h3 {
     margin-top: 123px;
 }
 
-.rect_yellow {
+
+.container{
+    display: flex;
+    min-width: 100vw;
+}
+#wrapper_game {
+    height:max-content;
+    flex-grow: 1;
     position: relative;
+    margin: 64px;
+    display: flex;
+    flex-wrap: wrap;
+ 
+}
+.rect_yellow {
+      position: relative;
+    display: flex;
     height: 463px;
-    width: 1440px;
+    width: 100%;
     background: #EBEF18;
 }
 
+
+
 .layout3 footer {
-    position: absolute;
+    position: relative;
+    display: flex;
+    width: 100%;
     background-color: #000000;
-    width: 1440px;
     height: 41px;
 }
 
@@ -411,7 +432,9 @@ h3 {
     aside.blue {
         display: none;
     }
-
+.container{
+    flex-flow:column ;
+}
     .layout3 header>section {
         margin-left: calc(100% - 100px);
     }
@@ -429,8 +452,9 @@ h3 {
     .rect_gray {
         width: 100%;
         position: relative;
-        top: 123px;
-        height: 105px;
+        /* top: 123px; */
+        min-height: 105px;
+        max-height: 105px;
     }
 
     #main_nav>ul>li {
@@ -442,7 +466,7 @@ h3 {
         position: relative;
         height: 474px;
         width: 100%;
-        margin-top: 1900px;
+      
     }
 
     .layout3 footer {
